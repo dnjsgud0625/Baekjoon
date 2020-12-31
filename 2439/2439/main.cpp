@@ -1,14 +1,18 @@
-//
-//  main.cpp
-//  2439
-//
-//  Created by Lee on 2020/12/31.
-//
-
 #include <iostream>
+using namespace std;
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    
+    int a=0;
+    cin >> a;
+    for(int i=1;i<=a;i++){
+        for(int j=a-i;j>0;j--){
+            cout << " ";
+        }
+        for(int k=1;k<=i;k++){
+            cout << "*";
+        }
+        cout << '\n';
+    }
     return 0;
 }
