@@ -4,7 +4,7 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     int n;
-    int arr[100001]={0,};
+    int arr[1000001]={0,};
     
     cin >> n;
     for(int i=0;i<n;i++){
