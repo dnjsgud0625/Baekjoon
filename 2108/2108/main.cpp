@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cmath>
 #include <algorithm>
-#include <vector>
 using namespace std;
 
 int main(int argc, const char * argv[]) {
@@ -14,15 +13,15 @@ int main(int argc, const char * argv[]) {
 
     
     cin >> n;
-    vector<int> vec(n);
+    int num[n];
     for(int i=0;i<n;i++){
-        cin >> vec[i];
-        total += vec[i];
-        cnt[vec[i]+4000]++;
-        if(max<vec[i]) max=vec[i];
-        if(min>vec[i]) min=vec[i];
+        cin >> num[i];
+        total += num[i];
+        cnt[num[i]+4000]++;
+        if(max<num[i]) max=num[i];
+        if(min>num[i]) min=num[i];
     }
-    sort(vec.begin(),vec.end());
+    sort(num,num+n);
     
     for(int i=0;i<8001;i++){
         if(cnt[i]>visit){
@@ -38,7 +37,7 @@ int main(int argc, const char * argv[]) {
         }
     }
     cout << round((double)total/n) << endl;
-    cout << vec[n/2] << endl;
+    cout << num[n/2] << endl;
     cout << many << endl;
     cout << max-min << endl;
     
